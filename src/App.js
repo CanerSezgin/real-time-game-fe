@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Game from './pages/Game';
+
+import './App.css';
 
 import io from 'socket.io-client';
 const ENDPOINT = 'http://127.0.0.1:4000';
@@ -10,10 +12,7 @@ const ENDPOINT = 'http://127.0.0.1:4000';
 const socket = io.connect(ENDPOINT);
 
 function App() {
-  
-  useEffect(() => {
-    console.log("app")
-  }, []);
+
 
   return (
     <Router>
